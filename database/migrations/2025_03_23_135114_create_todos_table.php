@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
             $table->string("title", 70);
+            $table->boolean("isCompleted")->default(false);
             $table->timestamps();
         });
     }
